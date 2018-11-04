@@ -5,35 +5,42 @@
   - Main styling is done in /styles/sections/featured-collection.scss
 ------------------------------------------------------------------------------
 {% endcomment %}
-
+<link rel="stylesheet" href="../styles/sections/featured-collection.scss">
 <section class="featured-collection" data-section-id="{{ section.id }}" data-section-type="featured-collection">
   {%- assign collection = collections[section.settings.collection] -%}
 
-  <h2>{{ collection.title | escape }}</h2>
+  <h2 class="col-title">{{ collection.title | escape }}</h2>
 
-  <p>{{ collection.description }}</p>
+  <p class="col-description">{{ collection.description }}</p>
 
   {% for product in collection.products limit: 6 %}
     {% assign current_variant = product.selected_or_first_available_variant %}
-  
-    <a href="{{ product.url | within: collection }}">
-      <div>
+
+<div class="prod-parent">
+
+    <a class="product" href="{{ product.url | within: collection }}">
+
+      <div class="item-image">
         {% if product.featured_image != blank %}
           {{ product.featured_image | img_url: 'large' | img_tag }}
         {% endif %}
-        
-        <span js-ajax-cart="addToCart" data-variant-id="{{ current_variant.id }}" data-quantity="1">Add to cart</span>
       </div>
 
-      <div>
-        <p>{{ product.title | escape }}</p>
+      <div class="prod-info">
 
-        <span>
+        <span class="add-cart" js-ajax-cart="addToCart" data-variant-id="{{ current_variant.id }}" data-quantity="1">Add to cart</span>
+
+      <div>
+        <p class="prod-title">{{ product.title | escape }}</p>
+
+        <span class="prod-price">
           {% include 'product-price' %}
         </span>
       </div>
+    </div>
     </a>
   {% endfor %}
+</div>
 </section>
 
 {% schema %}
