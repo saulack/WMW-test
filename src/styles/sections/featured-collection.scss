@@ -4,25 +4,27 @@
  * Base styling for the featured collection product grid.
  *
  */
+
 .featured-collection {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Helvetice Neue';
 }
 
 .col-title {
+  position: absolute;
+  margin: 25px;
   color: #003366;
   font-size: 40px;
   margin-bottom: 0;
 }
 
 .col-description {
-  margin-top: 0;
+  margin-top: 90px;
   margin-bottom: 50px;
-  margin-left: 25%;
-  margin-right: 25%;
   text-align: center;
+  max-width: 27%;
   color: #9B9B9B;
   font-size: 18px;
 }
@@ -35,7 +37,7 @@
 }
 
 .product {
-  margin: 20px;
+  margin: 35px;
   color: #003366;
   text-decoration: none;
   word-wrap: break-word;
@@ -43,25 +45,41 @@
   max-width: 300px;
   text-align:left;
 }
+
 .item-image {
+  z-index: 1;
   position: absolute;
 }
 
 .add-cart {
+  z-index: 0;
   position: relative;
-  padding: 20px;
   background-color: white;
+  padding: 45px;
+  padding-top: 11px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.item-image:hover {
+  z-index: -1;
+}
+
+.add-cart:hover {
+  z-index: 1;
 }
 
 .prod-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 130%;
+  margin-top: 400px;;
 }
 
 
 .prod-title {
+  margin-top: 40px;
+  font-weight: bold;
   position: relative;
   margin-bottom: 0;
 }
@@ -70,4 +88,19 @@
   color: #9B9B9B;
   font-weight:400;
   font-size: 18px;
+}
+
+.view {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  margin: 50px;
+  padding: 30px;
+  font-size: 23px;
+  color: white;
+  font-weight: bold;
+  background-color: #003366;
+
 }
