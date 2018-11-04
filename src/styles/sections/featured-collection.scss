@@ -4,6 +4,7 @@
  * Base styling for the featured collection product grid.
  *
  */
+
 @media only screen and (min-width: 601px) {
   .featured-collection {
     display: flex;
@@ -32,7 +33,7 @@
 
   .prod-parent {
     display: flex;
-    flex-flow: wrap-reverse row;
+    flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: baseline;
   }
@@ -61,6 +62,7 @@
     padding-top: 11px;
     padding-bottom: 15px;
     font-weight: bold;
+    font-size: 20px;
   }
 
   .item-image:hover {
@@ -147,7 +149,6 @@
     text-decoration: none;
     word-wrap: break-word;
     font-size: 18px;
-    // min-width: 252px;
     max-width: 300px;
     text-align:left;
   }
@@ -156,11 +157,13 @@
   }
 
   .add-cart {
-    font-size: 0;
-    // position: relative;
-    // padding: 45px;
-    // padding-top: 11px;
-    // padding-bottom: 15px;
+    font-size: 15px;
+    position: relative;
+    padding: 45px;
+    padding-top: 11px;
+    box-shadow: 1px 1px rgba(118, 116, 122, 0.5);
+    padding-bottom: 15px;
+    margin-bottom: 3px;
   }
 
 
@@ -175,16 +178,16 @@
   .prod-title {
     font-weight: bold;
     margin-top: 0;
-    font-size: 12px;
+    font-size: 18px;
     // position: relative;
     margin-bottom: 0;
-    text-align: center;
+    text-align: left;
   }
   .prod-price {
-    // margin-top: 0;
-    // color: #9B9B9B;
-    // font-weight: 400;
-    // font-size: 18px;
+    margin-top: 0;
+    color: #9B9B9B;
+    font-weight: 400;
+    font-size: 18px;
   }
 
   .view {
@@ -199,7 +202,6 @@
     color: white;
     font-weight: bold;
     background-color: #003366;
-
   }
 
 }
